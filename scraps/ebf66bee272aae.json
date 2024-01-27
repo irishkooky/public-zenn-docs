@@ -1,0 +1,19 @@
+{
+  "title": "Panda CSS",
+  "closed": false,
+  "archived": false,
+  "created_at": "2023-12-19",
+  "comments": [
+    {
+      "author": "ichigoooo",
+      "created_at": "2023-12-19",
+      "body_markdown": "Panda CSSにはcssをマージする方法が2つある。`css`と`cx`。\n## css\n```js\nstyle1 = { gap: '3rem' }\nstyle2 = { gap: '1rem' }\n\nclassName={css(style1, style2)} // gap: '1rem'\n```\ncssは**スタイル**をマージする。つまり、**tsx内でマージする時点後に書かれたスタイル(style2)が優勢**になる。\nあと、cssに入るのはプレーンなオブジェクト。\n\n## cx\ncxは**className**をマージする。つまり、**コンパイル後のスタイルシートを参照するので、どちらが優勢になるかはコンパイルされた順番による。**\nあと、cxにはプレーンなオブジェクトは入れられない。\n\n## 結論\n意図的に後に記載したスタイルを優先させるにはcssでマージする。",
+      "body_updated_at": "2023-12-19"
+    },
+    {
+      "author": "ichigoooo",
+      "created_at": "2023-12-19",
+      "body_markdown": "<styled.hogehoge>\nhttps://panda-css.com/docs/concepts/style-props"
+    }
+  ]
+}

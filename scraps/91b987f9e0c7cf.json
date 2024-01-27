@@ -1,0 +1,18 @@
+{
+  "title": "Nuxt (Vue.js) -> Next.js (React)",
+  "closed": false,
+  "archived": false,
+  "created_at": "2023-12-19",
+  "comments": [
+    {
+      "author": "ichigoooo",
+      "created_at": "2023-12-19",
+      "body_markdown": "Vueでは子コンポーネント側で特に何も設定しなくてもidやclassを渡せたけど、Reactだと子コンポーネント側にしっかりとpropsとして定義しなければ渡せない。\n## Vue\n```vue:Button.vue\n<template>\n  <button>click me</button>\n</template>\n```\n```vue:Page.vue\n<template>\n  <Button id=\"hoge\" />\n</template>\n```\nvueだとこれでid渡せた。\n## React\n```tsx:button.tsx\ninterface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {\n  children: React.ReactNode;\n}\n\nexport function Button({ ...rest }: ButtonProps) {\n  return <button {...rest}>hoge</button>;\n}\n```\n```tsx:Page.tsx\nimport { Button } from \"./ui/button\";\n\nexport default function Page() {\n  return <Button id=\"hoge\" />\n}\n```\nのようにpropsで受け取れるように定義しなければならない。\n`...rest`とスプレッド構文で展開しているのは、buttonが受け取れる属性をいちいち定義しなくて良いようにするためである。\n\n"
+    },
+    {
+      "author": "ichigoooo",
+      "created_at": "2023-12-21",
+      "body_markdown": "Vueの`template`はReactだと`Fragment`"
+    }
+  ]
+}

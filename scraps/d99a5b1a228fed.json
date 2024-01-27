@@ -1,0 +1,18 @@
+{
+  "title": "piniaの使い方メモ",
+  "closed": true,
+  "archived": false,
+  "created_at": "2023-03-07",
+  "comments": [
+    {
+      "author": "ichigoooo",
+      "created_at": "2023-03-07",
+      "body_markdown": "export const useStoreUpperCategory = defineStore('useStoreUpperCategory', {\n  /**\n   * state: データの読み書き(vueで言うdata)\n   * 使い方↓\n   * const storeUpperCategory = useStoreUpperCategory()\n   * const id = storeUpperCategory.id\n   * ❌ const id = useStoreUpperCategory().id これだと動かない\n   */\n  state: () => ({\n    id: 1,\n  }),\n  /**\n   * getters: 加工したデータの読み取り(vueで言うcomputed)\n   * ↓イメージしやすいようにテキトーなロジック作ってます(使ってはいない)\n   * const storeUpperCategory = useStoreUpperCategory()\n   * const double = storeUpperCategory.double\n   * ❌ const double = useStoreUpperCategory().double これだと動かない\n   */\n  getters: {\n    double: (state) => state.id * 2,\n  },\n  /**\n   * actions: 各種メソッドを実装(vueで言うmethods)\n   * ↓イメージしやすいようにテキトーなロジック作ってます(使ってはいない)\n   * const storeUpperCategory = useStoreUpperCategory()\n   * @click=\"storeUpperCategory.increment()\"\n   * ❌ @click=\"useStoreUpperCategory().increment()\" これだと動かない\n   */\n  actions: {\n    increment() {\n      this.id++\n    },\n  },\n  persist: true,\n})\n"
+    },
+    {
+      "author": "ichigoooo",
+      "created_at": "2023-03-07",
+      "body_markdown": "imports: {\n    dirs: ['stores', 'composables/api', 'composables/data'],\n  },"
+    }
+  ]
+}
