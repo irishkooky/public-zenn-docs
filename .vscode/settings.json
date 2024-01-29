@@ -1,0 +1,12 @@
+{
+  "cSpell.words": [
+    "corepack",
+    "nodebrew",
+    "nodenv",
+    "Nuxt",
+    "typeof",
+    "veevalidate"
+  ],
+  "prettier.semi": false,
+  "prettier.singleQuote": false
+}
