@@ -1,15 +1,15 @@
 {
   "cSpell.words": [
+    "antfu",
     "Bitwarden",
     "corepack",
     "nodebrew",
     "nodenv",
     "Nuxt",
+    "nuxtjs",
     "Raycast",
     "tailwindcss",
     "typeof",
     "veevalidate"
   ],
-  "prettier.semi": false,
-  "prettier.singleQuote": false
 }
